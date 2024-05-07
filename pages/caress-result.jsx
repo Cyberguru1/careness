@@ -80,7 +80,7 @@ export default function Caress_result() {
       </Head>
 
       <br />
-      <div className={styles.container}>
+      <div className={styles.card}>
         <h1 className={styles.title}>Quiz Results</h1>
 
         <div className={styles.resultContainer}>

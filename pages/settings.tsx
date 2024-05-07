@@ -73,7 +73,7 @@ export default function Settings() {
 			</title>
 		</Head>
 
-		<div className={styles.container}>
+		<div className={styles.card}>
 		<div className={styles.header}>
         {/*<img src="/logo.png" alt="Logo" />*/}
 		<div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
@@ -88,7 +88,7 @@ export default function Settings() {
       </div>
 		</div>
 		
-		<div className={styles.container} style={{textAlign: 'center'}}>
+		<div className={styles.card} style={{textAlign: 'center'}}>
 			Signed in as  {(user as any)?.email ?? 'Unknown'}
 		</div>
 

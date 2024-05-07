@@ -172,7 +172,7 @@ export default function ProfileView() {
 			<Head>
 				<title>Profile</title>
 			</Head>
-			<div className={styles.container}>
+			<div className={styles.card}>
 				<div className={styles.header}>
 					{/*<img src="/logo.png" alt="Logo" />*/}
 					<div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
@@ -197,7 +197,7 @@ export default function ProfileView() {
 					</div>
 				</div>
 			</div>
-			<div className={styles.container} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5px' }}>
+			<div className={styles.card} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '5px' }}>
 				<a className={styles.link} onClick={therapist}>
 					Are you a Licensed Therapist?
 				</a>

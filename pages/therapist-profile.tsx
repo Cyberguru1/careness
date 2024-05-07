@@ -15,7 +15,7 @@ export default function TherapistProfile() {
 				Apply for Therapist
 			</title>
 		</Head>
-		<div className={styles.container}>
+		<div className={styles.card}>
 		<div className={styles.row}>
 			<div style={{display:  'flex', alignItems: 'center', cursor: 'pointer', flexDirection: 'column',justifyContent: 'center', alignSelf:  'flex-start', marginTop: '2px', marginLeft: '10px', width: '30px'}} onClick={() => router.replace('/profile')}>
 				<LucideArrowLeft></LucideArrowLeft>

@@ -320,7 +320,7 @@ export default function Ocean_quiz() {
   <div className={styles.progress} style={{ width: `${(questionNumber / questions.length) * 100}%` }}></div>
 </div>
 
-		<div className={styles.container}>
+		<div className={styles.card}>
 			<div className={styles.question}>
 				Q{questionNumber + 1}) {questions[questionNumber].question}
 			</div>

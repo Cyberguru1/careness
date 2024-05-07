@@ -107,7 +107,7 @@ export default function Caress_result() {
 			<div className={styles.row}>
 
 
-				<div className={styles.container}>
+				<div className={styles.card}>
 					<h1 className={styles.title}>Quiz Results</h1>
 
 					<div className={styles.resultContainer}>
@@ -137,7 +137,7 @@ export default function Caress_result() {
 				{/*<br/>*/}
 
 
-				<div className={styles.container}>
+				<div className={styles.card}>
 					<div className={styles.resultContainer}>
 						<div className={styles.label}>
 							Traits
