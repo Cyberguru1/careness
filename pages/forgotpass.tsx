@@ -16,11 +16,11 @@ export default function TherapistProfile() {
 
     const [error, setError] = useState(null);
 
-    const notify = (nTitle, typeEvent, context) => {
+    const notify = (nTitle: string, typeEvent: string, context: string) => {
         Store.addNotification({
             title: `${nTitle}`,
             message: `${context}`,
-            type: `${typeEvent}`, // 'success', 'info', 'warning'
+            type: `info`, // 'success', 'info', 'warning'
             container: 'bottom-left',
             animationIn: ['animated', 'fadeIn'],
             animationOut: ['animated', 'fadeOut'],

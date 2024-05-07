@@ -8,7 +8,7 @@ import {
 	updateProfile,
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
-    confirmPasswordReset,
+	confirmPasswordReset,
 	connectAuthEmulator,
 } from "firebase/auth";
 import 'firebase/compat/auth';
@@ -22,12 +22,11 @@ export default function Login() {
 
 	const [showDropdown, setShowDropdown] = useState(false);
 	const [showbool, setshowBool] = useState(true);
-	const [showForgot, setshowForgot] = useState(true);
 	const [input, setInput] = useState({ email: "", password: "", cpassword: " " });
 	const [error, setError] = useState(null);
 
 
-	const notify = (nTitle, typeEvent, context) => {
+	const notify = (nTitle: string, typeEvent: string, context: string) => {
 		Store.addNotification({
 			title: `${nTitle}`,
 			message: `${context}`,
@@ -38,7 +37,6 @@ export default function Login() {
 			dismiss: { duration: 3500 }
 		});
 	}
-
 
 	const handleSignInWithPassword = (e) => {
 		notify("Sign In", "info", "Signing in...")
@@ -61,30 +59,30 @@ export default function Login() {
 			});
 	};
 
-	const handleConfirmPassword = (e) => {
-		e.preventDefault();
-		setError("");
-		let password = e.target.elements.password.value;
-		let cpassword = e.target.elements.cpassword.value;
-		if (password !== cpassword) {
-			setError("Passwords do not match");
-			notify("Error", "info", "Passwords do not match")
-			return;
-		};
+	// const handleConfirmPassword = (e) => {
+	// 	e.preventDefault();
+	// 	setError("");
+	// 	let password = e.target.elements.password.value;
+	// 	let cpassword = e.target.elements.cpassword.value;
+	// 	if (password !== cpassword) {
+	// 		setError("Passwords do not match");
+	// 		notify("Error", "info", "Passwords do not match")
+	// 		return;
+	// 	};
 
-		// sign in user
-		confirmPasswordReset(firebase.auth(), email, password)
-			.then((userCredential) => {
-				notify("LoggedIn", "success", "You have successfully logged in")
-			})
-			.catch((err) => {
-				if (err.code) {
-					setError(`${err.code.split('/').slice(-1)[0].split('-').join(' ')}`);
-				} else {
-					console.log(err.code);
-				}
-			});
-	};
+	// 	// sign in user
+	// 	confirmPasswordReset(firebase.auth(), email, password)
+	// 		.then((userCredential) => {
+	// 			notify("LoggedIn", "success", "You have successfully logged in")
+	// 		})
+	// 		.catch((err) => {
+	// 			if (err.code) {
+	// 				setError(`${err.code.split('/').slice(-1)[0].split('-').join(' ')}`);
+	// 			} else {
+	// 				console.log(err.code);
+	// 			}
+	// 		});
+	// };
 
 
 
@@ -149,12 +147,8 @@ export default function Login() {
 	const toggleBool = () => {
 		setshowBool(!showbool);
 		setError("");
-	}
+	};
 
-	const toggleshowForgot = () => {
-		setshowForgot(!showForgot);
-		setError("");
-	}
 	const toggleDropdown = () => {
 		setShowDropdown(!showDropdown);
 		setError("");
@@ -163,7 +157,7 @@ export default function Login() {
 		}
 	};
 
-	const Login = (props) => {
+	const Loginn = (props) => {
 
 		return (
 			<div className={`${styles.formContainer} ${showDropdown ? styles.show : ''}`}>
@@ -188,7 +182,7 @@ export default function Login() {
 				</form>
 				<br />
 				<p>Don't have an account? <a style={{ color: "blue" }} href="#" onClick={props.toggleBool}>Sign Up</a>.</p>
-				<p>Forgot password ? <a style={{ color: "blue" }} href="#" onClick={()=> {router.push('/forgotpass')}}>Reset</a>.</p>
+				<p>Forgot password ? <a style={{ color: "blue" }} href="#" onClick={() => { router.push('/forgotpass') }}>Reset</a>.</p>
 			</div>
 		)
 	}
@@ -300,7 +294,7 @@ export default function Login() {
 					</button>
 				</div>
 				{showDropdown && (
-					showbool ? <Login toggleBool={toggleBool} /> : <Register toggleBool={toggleBool} />
+					showbool ? <Loginn toggleBool={toggleBool} /> : <Register toggleBool={toggleBool} />
 				)}
 			</div>
 

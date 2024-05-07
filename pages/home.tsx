@@ -9,11 +9,9 @@ import styles from '@/styles/home.module.css';
 import Link from 'next/link';
 import {
 	CircularProgressbar,
-	CircularProgressbarWithChildren,
 	buildStyles
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { orderBy } from 'firebase/firestore';
 import { ReactNotifications, Store } from 'react-notifications-component'
 import 'react-notifications-component/dist/theme.css';
 
@@ -50,7 +48,7 @@ const MyCircularProgressBar = ({ initialPercentage, delay, nPercent, label }) =>
 	);
 };
 
-const notify = (nTitle, typeEvent, context) => {
+const notify = (nTitle: string, typeEvent: string, context: string) => {
 	Store.addNotification({
 		title: `${nTitle}`,
 		message: `${context}`,
