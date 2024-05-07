@@ -1,0 +1,40 @@
+.search {
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border: 2px solid black;
+	border-radius: 20px;
+	height: 50px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #ECDFF580;
+}
+
+.card {
+	background-color: #ECDFF5;
+	border-radius: 10px;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+	padding: 20px;
+	text-align: center;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	font-family: 'Poppins', sans-serif;
+  }
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,61 @@
+.topbar {
+	background-color: rgba(0, 0, 0, 0);
+	/*color: #fff;*/
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	font-family: 'Poppins', sans-serif;
+	height: 70px;
+	align-items: center;
+  }
+  
+  .topbar a {
+	color: black;
+	margin-right: 10px;
+	text-decoration: none;
+	font-weight: 430;
+	font-size: 19px;
+  }
+  
+  
+  .topbar img {
+	border-radius: 50%;
+	height: 45px;
+	width: 45px;
+	object-fit: cover;
+  }
+  
+  .topbar span {
+	margin-left: 5px;
+  }
+  
+.left {
+	align-items: center;
+	display: flex;
+}
+
+/* Define the animation */
+@keyframes typing {
+	from {
+	  width: 0;
+	}
+	to {
+	  width: 100%;
+	}
+  }
+  
+  .greeting {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typing 1.5s steps(5, end) forwards;
+	animation-timing-function: linear; /* Add this line to adjust the timing function */
+  }
+  
+  /* Modify the animation steps */
+  @media screen and (min-width: 768px) {
+	.greeting {
+	  animation: typing 1.5s steps(10, end) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	  /* increased steps to 10 for larger screens */
+	}
+  }
