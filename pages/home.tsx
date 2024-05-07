@@ -229,19 +229,16 @@ export default function Home() {
 				)}
 
 
-				{latestQuizResult && (
-					<div className={styles.card}>
-						<div className={styles.mh}>
-							Not yet taken your weekly Mental Health Quiz?
-						</div>
-						<div>
-							<Link className={styles.link} href="/quizes">
-								Click here to take it now!
-							</Link>
-						</div>
+				<div className={styles.card}>
+					<div className={styles.mh}>
+						Not yet taken your weekly Mental Health Quiz?
 					</div>
-
-				)}
+					<div>
+						<Link className={styles.link} href="/quizes">
+							Click here to take it now!
+						</Link>
+					</div>
+				</div>
 
 				<div className={styles.card}>
 					<div className={styles.mh}>
@@ -260,4 +257,3 @@ export default function Home() {
 		</>
 	)
 }
-
