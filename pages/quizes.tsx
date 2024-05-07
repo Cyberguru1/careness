@@ -99,7 +99,7 @@ export default function Quiz() {
 				Different Health Models
 			</div>
 
-			<div className={styles.container}>
+			<div className={styles.card}>
 				<div className={styles.title} > 
 					Caress Model (Weekly Mental Health Assesment)
 				</div>
@@ -126,7 +126,7 @@ export default function Quiz() {
 			</div>
 			</div>
 
-			<div className={styles.container}>
+			<div className={styles.card}>
 				<div className={styles.title} > 
 					Ocean Model (Personality Test)
 				</div>
