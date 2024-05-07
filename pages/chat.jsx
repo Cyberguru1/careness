@@ -134,9 +134,9 @@ export default function ChatBot() {
 			<span ref={dummy}></span>
 			<form className={styles.form} onSubmit={sendMessage}>
 
-				<input className={styles.input} value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Message..." />
+				<input className={styles.input} onChange={(e) => setFormValue(e.target.value)} placeholder="Message..." />
 
-				<button className={styles.button} type="submit" disabled={!formValue}><LucideSend /></button>
+				<button className={styles.button} type="submit" ><LucideSend /></button>
 
 			</form>
 		</>

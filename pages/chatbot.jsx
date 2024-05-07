@@ -7,25 +7,23 @@ import firebase from '@/firebase/clientApp';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 // import { Query } from '@firebase/firestore';
 import 'firebase/firestore';
-// import auth from '@/firebase/detectSignin';
+import auth from '@/firebase/detectSignin';
 import TextToSpeech from './utils/TextToSpeech';
 
 export default function ChatBot() {
+	// interface User {
+	// 	uid: string;
+	// 	email: string | null;
+	// 	displayName: string | null;
+	// 	photoURL: string | null;
+	// 	emailVerified: boolean;
+	// 	phoneNumber: string | null;
+	// 	isAnonymous: boolean;
+	// 	tenantId: string | null;
+	// 	providerData: any[];
+	//   }
 
-	//interface User {
-	//	uid: string;
-	//	email: string | null;
-	//	displayName: string | null;
-	//	photoURL: string | null;
-	//	emailVerified: boolean;
-	//	phoneNumber: string | null;
-	//	isAnonymous: boolean;
-	//	tenantId: string | null;
-	//	providerData: any[];
-	//  }
-
-	//const [user, setUser] = useState("");
-
+	// const [user, setUser] = useState<User | null>(null);
 	const router = useRouter();
 
 	const [user, setUser] = useState(null);
@@ -39,15 +37,15 @@ export default function ChatBot() {
 	//messages = messages?.reverse();
 	const [data, setData] = useState("");
 
-	// useEffect(() => {
-	// 	const authenticate = async () => {
-	// 		const currentUser = await auth.isLoggedIn();
-	// 		console.log('User object:', currentUser);
-	// 		setUser(currentUser);
-	// 		return currentUser;
-	// 	}
-	// 	authenticate();
-	// }, []);
+	useEffect(() => {
+		const authenticate = async () => {
+			const currentUser = await auth.isLoggedIn();
+			console.log('User object:', currentUser);
+			setUser(currentUser);
+			return currentUser;
+		}
+		authenticate();
+	}, []);
 
 	useEffect(() => {
 		dummy.current.scrollIntoView({ behavior: 'smooth' });
@@ -64,6 +62,8 @@ export default function ChatBot() {
 			uid,
 			photoURL,
 		});
+
+		console.log(formValue)
 
 		fetch('https://caress-chatbot-2.devansharora.repl.co/predict', {
 			method: 'POST',

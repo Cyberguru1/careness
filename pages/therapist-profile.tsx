@@ -35,7 +35,7 @@ export default function TherapistProfile() {
 		<br />
 
 		<div className={`${styles.card} ${styles.contact}`}>
-<form className={styles.forms} action="https://formsubmit.co/dev.marvel.avengers@gmail.com" method="post" autoComplete="off">
+<form className={styles.forms} action="https://formsubmit.co/hamzasaidu34@gmail.com" method="post" autoComplete="off">
 		
 	<label className={styles.label} htmlFor="name" >Your Name</label>
 	<input type="text" name="name" className={styles.input} placeholder="Your Name" required />
