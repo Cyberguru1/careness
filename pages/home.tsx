@@ -32,7 +32,6 @@ const MyCircularProgressBar = ({ initialPercentage, delay, nPercent, label }) =>
 		<div>
 			<div className={styles.progressbar}>
 				<CircularProgressbar
-					// style={{ height: 500, width: 500 }}
 					value={percentage}
 					text={` ${percentage}%`}
 					styles={buildStyles({
@@ -230,7 +229,7 @@ export default function Home() {
 				)}
 
 
-				{!latestQuizResult && (
+				{latestQuizResult && (
 					<div className={styles.card}>
 						<div className={styles.mh}>
 							Not yet taken your weekly Mental Health Quiz?
