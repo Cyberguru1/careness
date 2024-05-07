@@ -5,9 +5,9 @@ import { LucideArrowLeft, LucideSend, LucideUser } from 'lucide-react';
 import { useRouter } from 'next/router';
 import firebase from '@/firebase/clientApp';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-import { Query } from '@firebase/firestore';
+// import { Query } from '@firebase/firestore';
 import 'firebase/firestore';
-import auth from '@/firebase/detectSignin';
+// import auth from '@/firebase/detectSignin';
 import TextToSpeech from './utils/TextToSpeech';
 
 export default function ChatBot() {
@@ -26,12 +26,7 @@ export default function ChatBot() {
 
 	//const [user, setUser] = useState("");
 
-
 	const router = useRouter();
-
-	const goBack = () => {
-		router.replace("/chats");
-	}
 
 	const [user, setUser] = useState(null);
 	const [formValue, setFormValue] = useState('');
@@ -98,13 +93,9 @@ export default function ChatBot() {
 				console.error(error);
 			});
 
-
-
-
 		setFormValue('');
 		dummy.current.scrollIntoView({ behavior: 'smooth' });
 	};
-
 
 	const photoURL = user?.photoURL;
 
@@ -122,7 +113,6 @@ export default function ChatBot() {
 		</>)
 	}
 
-
 	return (
 		<>
 			<Head>
@@ -132,7 +122,7 @@ export default function ChatBot() {
 			</Head>
 			<div className={styles.headerr}>
 				<div className={styles.icon}>
-					<LucideArrowLeft onClick={goBack} className={styles.arrow} />
+					<LucideArrowLeft onClick={()=>{router.replace("/chats"); router.reload()}} className={styles.arrow} />
 					<div className={styles.chatAvatar}>
 						<LucideUser />
 					</div>
@@ -149,8 +139,6 @@ export default function ChatBot() {
 
 				<button className={styles.button} type="submit" disabled={!formValue}><LucideSend /></button>
 			</form>
-			<TextToSpeech text={"Hello world is a common stuff people say"} />
 		</>
 	)
 }
-

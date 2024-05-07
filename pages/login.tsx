@@ -8,8 +8,6 @@ import {
 	updateProfile,
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
-	confirmPasswordReset,
-	connectAuthEmulator,
 } from "firebase/auth";
 import 'firebase/compat/auth';
 import { useRouter } from 'next/router';
@@ -22,7 +20,6 @@ export default function Login() {
 
 	const [showDropdown, setShowDropdown] = useState(false);
 	const [showbool, setshowBool] = useState(true);
-	const [input, setInput] = useState({ email: "", password: "", cpassword: " " });
 	const [error, setError] = useState(null);
 
 
