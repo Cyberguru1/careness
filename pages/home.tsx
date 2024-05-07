@@ -204,7 +204,7 @@ export default function Home() {
 				)}
 
 				{quizResultLoaded && latestQuizResult && (
-					<div className={styles.container}>
+					<div className={styles.card}>
 						<div className={styles.mh}>
 							Your Previous Week Mental Health Report:
 						</div>
