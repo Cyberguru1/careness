@@ -79,7 +79,6 @@ export default function Search() {
 			// setTherapist(therapistUids);
 		  }
 
-		  
 			therapists();
 	}, [therapist, therapistUids, user])
 
