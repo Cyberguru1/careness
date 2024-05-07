@@ -1,16 +1,17 @@
 .chatContainer {
 	display: flex;
 	flex-direction: row;
-	height: calc(100vh - 60px); /* 60px is the height of the bottom bar */
+	height: calc(100vh - 60px);
+	/* 60px is the height of the bottom bar */
 }
-  
-  .chatList {
+
+.chatList {
 	width: 25%;
 	overflow-y: scroll;
 	padding: 20px;
-  }
-  
-  .chat {
+}
+
+.chat {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -20,13 +21,13 @@
 	transition: background-color 0.2s ease;
 	background-color: #ECDFF5;
 	/*min-height: 90px;*/
-  }
-  
-  .chat:hover {
+}
+
+.chat:hover {
 	background-color: #f5f5f5;
-  }
-  
-  .chatAvatar {
+}
+
+.chatAvatar {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -37,52 +38,54 @@
 	justify-content: center;
 	align-items: center;
 
-  }
-  
-  .chatInfo {
+}
+
+.chatInfo {
 	flex: 1;
-  }
-  
-  .chatName {
+}
+
+.chatName {
 	font-weight: bold;
-  }
-  
-  .chatPreview {
+}
+
+.chatPreview {
 	font-size: 14px;
 	/*color: #aaa;*/
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-  }
-  
-  .chatTime {
+}
+
+.chatTime {
 	font-size: 10px;
 	/*color: #aaa;*/
 	margin-left: 10px;
-  }
-  
-  .chatWindow {
+}
+
+.chatWindow {
 	flex: 1;
 	/*background-color: #f5f5f5;*/
 	padding: 10px;
-  }
-  
+}
 
-	.chatContainer {
-	  flex-direction: column;
-	  height: calc(100vh - 100px); /* Account for the bottom bar and chat header */
-	}
-  
-	.chatList {
-	  width: 100%;
-	  height: calc(100vh - 300px); /* Account for the chat header and window */
-	  overflow-y: scroll;
-	}
-  
-	.chatWindow {
-	  width: 100%;
-	  height: 200px;
-	}
+
+.chatContainer {
+	flex-direction: column;
+	height: calc(100vh - 100px);
+	/* Account for the bottom bar and chat header */
+}
+
+.chatList {
+	width: 100%;
+	height: calc(100vh - 300px);
+	/* Account for the chat header and window */
+	overflow-y: scroll;
+}
+
+.chatWindow {
+	width: 100%;
+	height: 200px;
+}
 
 
 .header {
@@ -91,10 +94,10 @@
 	/*text-align: center;*/
 	margin-top: 13px;
 }
-  
+
 .top {
 	display: flex;
-	
+
 }
 
 .arrow {
@@ -156,15 +159,15 @@
 	/*border-radius: 20px;*/
 	/*background-color: #ECDFF5;*/
 	z-index: 1;
-  }
+}
 
-  @media (min-width: 1200px) {
+@media (min-width: 1200px) {
 	.form {
 		padding-left: 20%;
 		padding-right: 20%;
 	}
-  }
-  
+}
+
 .form button {
 	width: 20%;
 	background-color: rgb(56, 56, 143);
@@ -175,9 +178,9 @@
 	/*justify-content: center;*/
 	align-items: center;
 }
-  
-  
-  .input {
+
+
+.input {
 	line-height: 1.5;
 	width: 100%;
 	font-size: 1.5rem;
@@ -188,10 +191,11 @@
 	border: none;
 	padding: 0 13px;
 	border-radius: 20px 0 0 20px;
-  }
-  
-  .button {
-	background-color: #282c34; /* Green */
+}
+
+.button {
+	background-color: #282c34;
+	/* Green */
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -200,13 +204,19 @@
 	display: inline-block;
 	cursor: pointer;
 	font-size: 1.25rem;
-  }
-  
-  .button:disabled {
+}
+
+@media screen and (max-width: 768px) {
+	.button {
+		width: 100%;
+	}
+}
+
+.button:disabled {
 	/*opacity: 0.4;*/
 	cursor: not-allowed;
-  }
-  
+}
+
 .text {
 	max-width: 80vw;
 	margin-bottom: 12px;
@@ -224,40 +234,47 @@
 	align-items: center;
 	/*flex-direction: row;*/
 	/*justify-content: center;*/
-  }
-  
-  .sent {
+}
+
+.sent {
 	flex-direction: row-reverse;
-  }
-  
-  .sent p {
+}
+
+.sent p {
 	color: white;
 	background: #0b93f6;
 	align-self: flex-end;
-  }
-  .received p {
+}
+
+.received p {
 	background: #e5e5ea;
 	color: black;
-  }
-	
+}
+
 .img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 2px 5px;
-  margin-bottom: 12px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin: 2px 5px;
+	margin-bottom: 12px;
 }
 
 .messageArea {
 	margin-top: 80px;
 	padding-bottom: 90px;
 	z-index: 0;
-	/*height: calc(100vh - 615px);*/
-	/*display: flex;*/
-  /*flex-direction: column;*/
-  /*overflow-y: auto;*/
-  /*flex-grow: ;*/
-  /*padding: 1rem;*/
+	height: calc(100vh - 615px);
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	flex-grow: auto;
+	padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	.messageArea {
+		width: 100%;
+	}
 }
 
 .chatAvatars {
@@ -272,4 +289,4 @@
 	align-items: center;
 	margin-left: 5px;
 	margin-bottom: 12px;
-  }
+}
