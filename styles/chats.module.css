@@ -20,7 +20,7 @@
 	border-radius: 20px;
 	transition: background-color 0.2s ease;
 	background-color: #ECDFF5;
-	/*min-height: 90px;*/
+	min-height: 90px;
 }
 
 .chat:hover {
@@ -179,9 +179,15 @@
 	align-items: center;
 }
 
+@media (max-width: 768px) {
+	.form button {
+		width: 100%;
+	}
+}
+
 
 .input {
-	line-height: 1.5;
+	line-height: 2.5;
 	width: 100%;
 	font-size: 1.5rem;
 	/*background: rgb(58, 58, 58);*/
@@ -261,9 +267,9 @@
 
 .messageArea {
 	margin-top: 80px;
-	padding-bottom: 90px;
+	padding-bottom: 190px;
 	z-index: 0;
-	height: calc(100vh - 615px);
+	/* height: calc(100vh - 615px); */
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
