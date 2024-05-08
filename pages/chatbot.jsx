@@ -100,7 +100,6 @@ export default function ChatBot() {
 		// 	});
 
 			//start
-
 			async function processMessageToChatGPT(chatMessages){
 				const API_KEY = `${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`
 				let apiMessages = chatMessages.map((messageObject)=>{
